@@ -30,7 +30,10 @@ const TestimonialContainer = () => {
         return () => parallaxInstance.disable();
     }, []);
     return (
-        <div className="testimonial-section section-py position-relative">
+        <div
+            id="testimonials"
+            className="testimonial-section section-py position-relative"
+        >
             <img
                 className="tetimonial-shape"
                 src={`${process.env.PUBLIC_URL}/images/testimonial/shape.png`}

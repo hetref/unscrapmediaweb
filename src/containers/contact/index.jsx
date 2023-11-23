@@ -7,7 +7,7 @@ import SectionTitle from "../../components/section-title";
 
 const ContactContainer = () => {
     return (
-        <section className="contact-section pb-6">
+        <section id="contact" className="contact-section pb-6">
             <div className="container">
                 <div className="row mb-n7">
                     <div className="col-xl-6 col-lg-6 mb-7">
@@ -15,8 +15,9 @@ const ContactContainer = () => {
                             <SectionTitle
                                 classOption="title-section"
                                 subTitle="CONTACT US"
+                                title="Get <span class='text-primary'>in</span> touch"
+                                excerptClassOption="mb-5"
                             />
-                            <h3 className="title">Get in touch</h3>
                             <p>
                                 Top rated construction packages we pleasure
                                 rationally encounter

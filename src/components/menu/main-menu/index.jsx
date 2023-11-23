@@ -30,26 +30,18 @@ const MainMenu = () => {
                     {/* <NavLink to={process.env.PUBLIC_URL + "/service"}>
                         Service
                     </NavLink> */}
-                    <a href="#service">Service</a>
+                    {/* <a href="#service">Service</a> */}
+                    <button onClick={() => scrollToSection("service")}>
+                        Service
+                    </button>
 
-                    <ul className="sub-menu">
-                        {/* <li className="sub-menu-item">
+                    {/* <ul className="sub-menu">
+                        <li className="sub-menu-item">
                             <NavLink
                                 className="sub-menu-link"
                                 to={process.env.PUBLIC_URL + "/service"}
                             >
                                 Service
-                            </NavLink>
-                        </li> */}
-                        <li className="sub-menu-item">
-                            <NavLink
-                                className="sub-menu-link"
-                                to={
-                                    process.env.PUBLIC_URL +
-                                    "/service-details/1"
-                                }
-                            >
-                                Video Editing
                             </NavLink>
                         </li>
                         <li className="sub-menu-item">
@@ -63,11 +55,14 @@ const MainMenu = () => {
                                 single service
                             </NavLink>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li>
                     {/* <NavLink to="/">Testimonials</NavLink> */}
-                    <a href="#testimonials">Testimonials</a>
+                    {/* <a href="#testimonials">Testimonials</a> */}
+                    <button onClick={() => scrollToSection("testimonials")}>
+                        Testimonials
+                    </button>
                     {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
@@ -91,7 +86,10 @@ const MainMenu = () => {
                     {/* <NavLink to={process.env.PUBLIC_URL + "/blog"}>
                         Team
                     </NavLink> */}
-                    <a href="#team">Team</a>
+                    {/* <a href="#team">Team</a> */}
+                    <button onClick={() => scrollToSection("team")}>
+                        Team
+                    </button>
                     {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
@@ -137,7 +135,10 @@ const MainMenu = () => {
                     {/* <NavLink to={process.env.PUBLIC_URL + "/contact"}>
                         Contact
                     </NavLink> */}
-                    <a href="#contact">Contact</a>
+                    {/* <a href="#contact">Contact</a> */}
+                    <button onClick={() => scrollToSection("contact")}>
+                        Contact
+                    </button>
                 </li>
             </ul>
         </nav>

@@ -7,7 +7,10 @@ import HomeData from "../../../data/home.json";
 
 const TeamContainer = ({ classOption }) => {
     return (
-        <div className={`team-section overflow-hidden ${classOption}`}>
+        <div
+            id="team"
+            className={`team-section overflow-hidden ${classOption}`}
+        >
             <div className="container position-relative">
                 <div className="row align-items-center">
                     <div className="col-lg-5">

@@ -3,7 +3,7 @@
         "id": 1,
         "classOption": "address-list mb-4 mb-xl-10 pb-2",
         "title": "Office Addres",
-        "info": "245 Southern Street, Apartment no. 174 Central Twon, New Yourk, USA"
+        "info": "Unscrap Media, SS3-99, Sector 2, Vashi, Navi Mumbai, Maharashtra 400703"
     },
     {
         "id": 2,
@@ -15,6 +15,6 @@
         "id": 3,
         "classOption": "address-list",
         "title": "Web Address",
-        "info": "info@example.com <br /> www.example.com"
+        "info": "unscrapmedia@gmail.com <br /> unscrapmedia.com"
     }
 ]
