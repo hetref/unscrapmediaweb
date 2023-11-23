@@ -6,7 +6,6 @@ const Logo = ({ image, classOption }) => {
         <Link className={`${classOption}`} to={process.env.PUBLIC_URL + "/"}>
             <img
                 className="logo-main"
-                style={{ width: "60%" }}
                 src={process.env.PUBLIC_URL + image}
                 alt="Logo"
             />

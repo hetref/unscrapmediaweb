@@ -16,7 +16,7 @@ const HomeAboutContainer = () => {
         return () => parallaxInstance.disable();
     }, []);
     return (
-        <div className="about-us position-relative">
+        <div className="about-us position-relative" id="about">
             <div className="container">
                 <div className="row mb-n7">
                     <div className="col-xl-5 col-lg-6 mb-7">

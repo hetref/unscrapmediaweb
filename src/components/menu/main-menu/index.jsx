@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
 
 const MainMenu = () => {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
+
     return (
         <nav className="main-menu d-none d-lg-block">
             <ul className="d-flex">
@@ -8,24 +16,40 @@ const MainMenu = () => {
                     <NavLink exact to="/">
                         Home
                     </NavLink>
+                    {/* <a href="/">Home</a> */}
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/about"}>
+                    {/* <NavLink to={process.env.PUBLIC_URL + "/#about"}>
                         About
-                    </NavLink>
+                    </NavLink> */}
+                    <button onClick={() => scrollToSection("about")}>
+                        About
+                    </button>
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/service"}>
+                    {/* <NavLink to={process.env.PUBLIC_URL + "/service"}>
                         Service
-                    </NavLink>
+                    </NavLink> */}
+                    <a href="#service">Service</a>
 
                     <ul className="sub-menu">
-                        <li className="sub-menu-item">
+                        {/* <li className="sub-menu-item">
                             <NavLink
                                 className="sub-menu-link"
                                 to={process.env.PUBLIC_URL + "/service"}
                             >
                                 Service
+                            </NavLink>
+                        </li> */}
+                        <li className="sub-menu-item">
+                            <NavLink
+                                className="sub-menu-link"
+                                to={
+                                    process.env.PUBLIC_URL +
+                                    "/service-details/1"
+                                }
+                            >
+                                Video Editing
                             </NavLink>
                         </li>
                         <li className="sub-menu-item">
@@ -42,8 +66,9 @@ const MainMenu = () => {
                     </ul>
                 </li>
                 <li>
-                    <NavLink to="/">Pages</NavLink>
-                    <ul className="sub-menu">
+                    {/* <NavLink to="/">Testimonials</NavLink> */}
+                    <a href="#testimonials">Testimonials</a>
+                    {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
                                 className="sub-menu-link"
@@ -60,13 +85,14 @@ const MainMenu = () => {
                                 team
                             </NavLink>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/blog"}>
-                        Blog
-                    </NavLink>
-                    <ul className="sub-menu">
+                    {/* <NavLink to={process.env.PUBLIC_URL + "/blog"}>
+                        Team
+                    </NavLink> */}
+                    <a href="#team">Team</a>
+                    {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
                                 className="sub-menu-link"
@@ -105,12 +131,13 @@ const MainMenu = () => {
                                 blog details
                             </NavLink>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/contact"}>
+                    {/* <NavLink to={process.env.PUBLIC_URL + "/contact"}>
                         Contact
-                    </NavLink>
+                    </NavLink> */}
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>

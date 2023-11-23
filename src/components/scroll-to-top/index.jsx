@@ -7,10 +7,10 @@ const ScrollToTop = (props) => {
     };
 
     useEffect(() => {
-        var position = window.pageYOffset;
+        var position = window.scrollY;
 
         const scrollHandler = () => {
-            let scrollPos = window.pageYOffset;
+            let scrollPos = window.scrollY;
             if (scrollPos < 200) {
                 setStick(false);
             } else if (scrollPos < position) {

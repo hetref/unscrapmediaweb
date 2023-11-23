@@ -210,7 +210,8 @@ const Footer = () => {
                             <div className="footer-widget">
                                 <h4 className="title">Contact info</h4>
                                 <p>
-                                    245 Southern Street, Apt. 147 New York, USA
+                                    Unscrap Media, SS3-99, Sector 2, Vashi, Navi
+                                    Mumbai, Maharashtra 400703
                                 </p>
                                 <ul className="address">
                                     <li>
@@ -232,17 +233,19 @@ const Footer = () => {
                                     <li>
                                         <a
                                             className="address-link"
-                                            href="mailto:info@example.com"
+                                            href="mailto:unscrapmedia@gmail.com"
                                         >
-                                            info@example.com
+                                            unscrapmedia@gmail.com
                                         </a>
                                     </li>
                                     <li>
                                         <a
                                             className="address-link"
-                                            href="mailto:info@example.com"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            href="https://unscrapmedia.com"
                                         >
-                                            www.example.com
+                                            unscrapmedia.com
                                         </a>
                                     </li>
                                 </ul>

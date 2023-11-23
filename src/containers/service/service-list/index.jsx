@@ -20,10 +20,10 @@ const ServiceListContainer = () => {
                 </div>
 
                 <div className="row mb-n7 align-items-center">
-                    <div className="col-md-6 col-xl-4 mb-7">
+                    <div className="col-md-6 col-xl-6 mb-sm-7">
                         <div className="service-media-wrapper media-spacing-left">
                             {ServiceData &&
-                                ServiceData.slice(0, 3).map((single, key) => {
+                                ServiceData.slice(0, 4).map((single, key) => {
                                     return (
                                         <ServiceBox data={single} key={key} />
                                     );
@@ -31,18 +31,18 @@ const ServiceListContainer = () => {
                         </div>
                     </div>
 
-                    <div className="col-xl-4 mb-7 order-md-1 order-xl-0">
+                    {/* <div className="col-xl-4 mb-7 order-md-1 order-xl-0">
                         <div className="service-media-img text-center">
                             <img
                                 src={`${process.env.PUBLIC_URL}/images/service/media.png`}
                                 alt="images_not_found"
                             />
                         </div>
-                    </div>
-                    <div className="col-md-6 col-xl-4 mb-7">
+                    </div> */}
+                    <div className="col-md-6 col-xl-6 mb-7">
                         <div className="service-media-wrapper media-spacing-right">
                             {ServiceData &&
-                                ServiceData.slice(3, 6).map((single, key) => {
+                                ServiceData.slice(4, 8).map((single, key) => {
                                     return (
                                         <ServiceBox data={single} key={key} />
                                     );

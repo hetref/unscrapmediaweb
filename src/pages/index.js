@@ -22,15 +22,6 @@ const HomePage = () => {
             <Layout>
                 <SEO title="Unscrap Media | Solution for Social Existence" />
                 <div className="wrapper">
-                    {/* Sections: */}
-                    {/* Navbar 
-                        Header 
-                        Worked with Brands 
-                        About Us 
-                        Services
-                        Testimonials 
-                        Founders 
-                        Footer */}
                     <Header />
                     <IntroContainer />
                     <BrandContainer />
