@@ -107,20 +107,20 @@
             {
                 "id": 1,
                 "thumb": "./images/team/rounded-img1.png",
-                "name": "Cristopher Williams",
-                "designation": "Head of Idea"
+                "name": "Cary Wood",
+                "designation": "Co-Founder"
             },
             {
                 "id": 2,
                 "thumb": "./images/team/rounded-img2.png",
-                "name": "Rebeca Smith",
-                "designation": "Head of HR"
+                "name": "Kaushik Patil",
+                "designation": "Co-Founder"
             },
             {
                 "id": 3,
                 "thumb": "./images/team/rounded-img3.png",
-                "name": "Ricardo Powel",
-                "designation": "Head of Development"
+                "name": "Tejan Suvarna",
+                "designation": "Co-Founder"
             }
         ]
     }

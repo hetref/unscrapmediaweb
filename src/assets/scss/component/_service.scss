@@ -133,6 +133,8 @@
         line-height: 1.25;
         margin-bottom: 1.25rem;
         font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
         &:hover {
             color: $primary;
         }

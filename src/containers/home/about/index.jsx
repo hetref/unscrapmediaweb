@@ -35,14 +35,22 @@ const HomeAboutContainer = () => {
                                 Since 2019 <span className="hr"></span>
                             </span>
                             <p className="mb-5">
-                                Pleasure rationally encounter consequences that
-                                are extremely painful. Nor again is there anyone
-                                who loves or pursues or desires to obtain
+                                Established in 2019, Unscrap Media is the
+                                brainchild of visionaries Cary Wood, Kaushik
+                                Patil, and Tejan Suvarna. Fueled by a collective
+                                passion for innovation, we bring a wealth of
+                                experience in social media marketing, web
+                                development, and creative design. At Unscrap, we
+                                are dedicated to reshaping the digital landscape
+                                by seamlessly integrating technology and
+                                creativity, delivering cutting-edge solutions
+                                that empower businesses to thrive in the
+                                ever-evolving online world.
                             </p>
-                            <p className="high-light mb-8">
+                            {/* <p className="high-light mb-8">
                                 Pleasure rationally encounter consequences that
                                 are extremely painful. Nor again is there
-                            </p>
+                            </p> */}
                             {/* <Button
                                 classOption="btn btn-lg btn-dark btn-hover-dark"
                                 text="Learn more"

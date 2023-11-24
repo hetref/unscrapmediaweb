@@ -3,15 +3,22 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Button = ({ classOption, text, path }) => {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
     return (
-        <React.Fragment>
-            <Link
-                to={process.env.PUBLIC_URL + path}
+        <>
+            <button
+                onClick={() => scrollToSection(path)}
                 className={`${classOption}`}
             >
                 {text}
-            </Link>
-        </React.Fragment>
+            </button>
+        </>
     );
 };
 

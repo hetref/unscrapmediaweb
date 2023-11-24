@@ -15,6 +15,14 @@ const Intro = ({ data }) => {
 
         return () => parallaxInstance.disable();
     }, []);
+
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
     return (
         <div className="hero-slider">
             <div className="container">
@@ -28,12 +36,12 @@ const Intro = ({ data }) => {
                             <Button
                                 classOption="btn btn-lg animated delay1 btn-dark btn-hover-dark me-4 mb-3 mb-sm-0"
                                 text="Contact Us"
-                                path="/about"
+                                path="contact"
                             />
                             <Button
                                 classOption="btn btn-lg animated delay2 btn-secondary btn-hover-secondary mb-3 mb-sm-0"
                                 text="Check Services"
-                                path="/contact"
+                                path="service"
                             />
                         </div>
                     </div>

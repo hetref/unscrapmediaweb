@@ -18,19 +18,19 @@ const TeamContainer = ({ classOption }) => {
                             <SectionTitle
                                 classOption="title-section"
                                 subTitle="TEAM"
-                                title="People, <span class='text-primary'>Behind</span> the Screen"
+                                title="Visionaries Behind <span class='text-primary'>Unscrap Media</span>"
                                 excerptClassOption="mb-5"
-                                excerpt="Pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain"
+                                excerpt="Meet the dynamic trio steering Unscrap Media towards excellence—Cary Wood, Kaushik Patil, and Tejan Suvarna. Fueled by a shared passion for innovation, they bring a wealth of experience in social media marketing, web development, and creative design. Together, they form the driving force behind our commitment to delivering cutting-edge solutions that redefine the digital landscape. With a vision to empower businesses through seamless integration of technology and creativity, Cary, Kaushik, and Tejan inspire our team to push boundaries and consistently exceed expectations."
                             />
-                            <p className="high-light mb-8">
+                            {/* <p className="high-light mb-8">
                                 Pleasure rationally encounter consequences that
                                 are extremely painful. Nor again is there
-                            </p>
-                            <Button
+                            </p> */}
+                            {/* <Button
                                 classOption="btn btn-lg btn-dark btn-hover-dark"
                                 text="View more"
                                 path="/team"
-                            />
+                            /> */}
                         </div>
                     </div>
                     <div className="col-lg-7">
