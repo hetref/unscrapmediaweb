@@ -36,8 +36,8 @@ const HomeAboutContainer = () => {
                             </span>
                             <p className="mb-5">
                                 Established in 2019, Unscrap Media is the
-                                brainchild of visionaries Cary Wood, Kaushik
-                                Patil, and Tejan Suvarna. Fueled by a collective
+                                brainchild of visionaries Tejan Suvarna, Kaushik
+                                Patil and Cary Wood. Fueled by a collective
                                 passion for innovation, we bring a wealth of
                                 experience in social media marketing, web
                                 development, and creative design. At Unscrap, we
