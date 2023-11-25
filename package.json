@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@axetroy/react-download": "^1.1.1",
+    "@emailjs/browser": "^3.11.0",
     "autoprefixer": "10.4.5",
     "disqus-react": "^1.1.1",
     "node-sass": "^8.0.0",
