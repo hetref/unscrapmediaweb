@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Button from "../../button";
 
 const MainMenu = () => {
     const scrollToSection = (sectionId) => {
@@ -13,27 +14,32 @@ const MainMenu = () => {
         <nav className="main-menu d-none d-lg-block">
             <ul className="d-flex">
                 <li>
-                    <NavLink exact to="/">
+                    {/* <NavLink exact to="/">
                         Home
-                    </NavLink>
+                    </NavLink> */}
+                    <Button type="homenav" text="Home" />
                     {/* <a href="/">Home</a> */}
                 </li>
                 <li>
                     {/* <NavLink to={process.env.PUBLIC_URL + "/#about"}>
                         About
                     </NavLink> */}
-                    <button onClick={() => scrollToSection("about")}>
+                    {/* <button onClick={() => scrollToSection("about")}>
                         About
-                    </button>
+                    </button> */}
+
+                    <Button path="about" text="About" />
                 </li>
                 <li>
                     {/* <NavLink to={process.env.PUBLIC_URL + "/service"}>
                         Service
                     </NavLink> */}
                     {/* <a href="#service">Service</a> */}
-                    <button onClick={() => scrollToSection("service")}>
+                    {/* <button onClick={() => scrollToSection("service")}>
                         Service
-                    </button>
+                    </button> */}
+
+                    <Button path="service" text="Service" />
 
                     {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
@@ -60,9 +66,11 @@ const MainMenu = () => {
                 <li>
                     {/* <NavLink to="/">Testimonials</NavLink> */}
                     {/* <a href="#testimonials">Testimonials</a> */}
-                    <button onClick={() => scrollToSection("testimonials")}>
+                    {/* <button onClick={() => scrollToSection("testimonials")}>
                         Testimonials
-                    </button>
+                    </button> */}
+
+                    <Button path="testimonials" text="Testimonials" />
                     {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
@@ -87,9 +95,11 @@ const MainMenu = () => {
                         Team
                     </NavLink> */}
                     {/* <a href="#team">Team</a> */}
-                    <button onClick={() => scrollToSection("team")}>
+                    {/* <button onClick={() => scrollToSection("team")}>
                         Team
-                    </button>
+                    </button> */}
+
+                    <Button path="team" text="Team" />
                     {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
@@ -136,9 +146,11 @@ const MainMenu = () => {
                         Contact
                     </NavLink> */}
                     {/* <a href="#contact">Contact</a> */}
-                    <button onClick={() => scrollToSection("contact")}>
+                    {/* <button onClick={() => scrollToSection("contact")}>
                         Contact
-                    </button>
+                    </button> */}
+
+                    <Button path="contact" text="Contact" />
                 </li>
             </ul>
         </nav>

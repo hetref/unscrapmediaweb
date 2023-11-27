@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useCallback, useContext } from "react";
+import { CursorContext } from "../../context/CursorContext";
 
-const Button = ({ classOption, text, path }) => {
+const Button = ({ classOption, text, path, type }) => {
+    const [, setCursor] = useContext(CursorContext);
+    const toggleCursor = useCallback(() => {
+        setCursor(({ active }) => ({ active: !active }));
+    });
+
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         element.scrollIntoView({
@@ -12,12 +18,28 @@ const Button = ({ classOption, text, path }) => {
     };
     return (
         <>
-            <button
-                onClick={() => scrollToSection(path)}
-                className={`${classOption}`}
-            >
-                {text}
-            </button>
+            {type === "homenav" ? (
+                <>
+                    <NavLink
+                        exact
+                        to="/"
+                        className={`${classOption}`}
+                        onMouseEnter={toggleCursor}
+                        onMouseLeave={toggleCursor}
+                    >
+                        {text}
+                    </NavLink>
+                </>
+            ) : (
+                <button
+                    onClick={() => scrollToSection(path)}
+                    className={`${classOption}`}
+                    onMouseEnter={toggleCursor}
+                    onMouseLeave={toggleCursor}
+                >
+                    {text}
+                </button>
+            )}
         </>
     );
 };
@@ -26,9 +48,12 @@ Button.propTypes = {
     classOption: PropTypes.string,
     text: PropTypes.string,
     path: PropTypes.string,
+    type: PropTypes.string,
 };
 Button.defaultProps = {
-    classOption: "btn",
+    classOption: "",
+    path: "",
+    type: "",
 };
 
 export default Button;

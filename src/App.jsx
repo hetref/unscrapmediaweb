@@ -23,82 +23,93 @@ import "./assets/css/vendor/font-awesome.css";
 import "./assets/css/vendor/material-design-iconic.min.css";
 import "./assets/css/plugins/animate.min.css";
 import "./assets/scss/style.scss";
+import Cursor from "./components/cursor";
+import CursorContextProvider from "./context/CursorContext";
 
 const App = () => {
     return (
-        <Router>
-            <NavScrollTop>
-                <Switch>
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/"}`}
-                        exact
-                        component={HomePage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/about"}`}
-                        component={AboutPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/service"}`}
-                        component={ServicePage}
-                    />
-                    <Route
-                        path={`${
-                            process.env.PUBLIC_URL + "/service-details/:id"
-                        }`}
-                        component={ServiceDetails}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/team"}`}
-                        component={TeamPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/faq"}`}
-                        component={FaqPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/contact"}`}
-                        component={ContactPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/blog"}`}
-                        component={BlogPage}
-                    />
-                    <Route
-                        path={`${
-                            process.env.PUBLIC_URL + "/blog-left-sidebar"
-                        }`}
-                        component={BlogLeftSidebarPage}
-                    />
-                    <Route
-                        path={`${
-                            process.env.PUBLIC_URL + "/blog-right-sidebar"
-                        }`}
-                        component={BlogRightSidebarPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`}
-                        component={BlogDetailsPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/author/:author"}`}
-                        component={BlogAuthor}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/date/:date"}`}
-                        component={BlogDate}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/tag/:slug"}`}
-                        component={BlogTag}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/category/:slug"}`}
-                        component={BlogCategory}
-                    />
-                </Switch>
-            </NavScrollTop>
-        </Router>
+        <CursorContextProvider>
+            <Cursor />
+            <Router>
+                <NavScrollTop>
+                    <Switch>
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/"}`}
+                            exact
+                            component={HomePage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/about"}`}
+                            component={AboutPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/service"}`}
+                            component={ServicePage}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/service-details/:id"
+                            }`}
+                            component={ServiceDetails}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/team"}`}
+                            component={TeamPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/faq"}`}
+                            component={FaqPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/contact"}`}
+                            component={ContactPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/blog"}`}
+                            component={BlogPage}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/blog-left-sidebar"
+                            }`}
+                            component={BlogLeftSidebarPage}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/blog-right-sidebar"
+                            }`}
+                            component={BlogRightSidebarPage}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/blog-details/:id"
+                            }`}
+                            component={BlogDetailsPage}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/author/:author"
+                            }`}
+                            component={BlogAuthor}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/date/:date"}`}
+                            component={BlogDate}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/tag/:slug"}`}
+                            component={BlogTag}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/category/:slug"
+                            }`}
+                            component={BlogCategory}
+                        />
+                    </Switch>
+                </NavScrollTop>
+            </Router>
+        </CursorContextProvider>
     );
 };
 
