@@ -38,8 +38,8 @@ const IconBoxContainer = ({ classOption }) => {
                             />
                             <Button
                                 classOption="btn btn-lg btn-dark btn-hover-dark"
-                                text="Get Started"
-                                path="/about"
+                                text="Contact Us"
+                                path="contact"
                             />
                         </div>
 
