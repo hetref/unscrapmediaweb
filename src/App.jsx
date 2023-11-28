@@ -25,11 +25,29 @@ import "./assets/css/plugins/animate.min.css";
 import "./assets/scss/style.scss";
 import Cursor from "./components/cursor";
 import CursorContextProvider from "./context/CursorContext";
+import { useEffect, useState } from "react";
 
 const App = () => {
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <CursorContextProvider>
-            <Cursor />
+            {windowSize.width > 990 && <Cursor />}
             <Router>
                 <NavScrollTop>
                     <Switch>

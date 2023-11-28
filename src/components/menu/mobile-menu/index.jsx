@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { getClosest, getSiblings, slideToggle, slideUp } from "../../../utils";
 import Logo from "../../logo";
+import Button from "../../button";
 
 const MobileMenu = ({ show, onClose }) => {
     const onClickHandler = (e) => {
@@ -32,6 +33,15 @@ const MobileMenu = ({ show, onClose }) => {
             });
         }
     };
+
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
+
     return (
         <div className={`offcanvas-modal ${show ? "show" : ""}`}>
             <div className="offcanvas-dialog">
@@ -39,7 +49,7 @@ const MobileMenu = ({ show, onClose }) => {
                     <div className="offcanvas-header">
                         <Logo
                             classOption="offcanvas-logo d-inline-block"
-                            image={`${process.env.PUBLIC_URL}/images/logo/logo.png`}
+                            image={`${process.env.PUBLIC_URL}/images/logo/logo-black.png`}
                         />
                         <button
                             type="button"
@@ -51,27 +61,46 @@ const MobileMenu = ({ show, onClose }) => {
                     <nav id="offcanvasNav" className="offcanvas-menu">
                         <ul>
                             <li>
-                                <NavLink exact to="/">
+                                <NavLink exact to="/" onClick={onClose}>
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={process.env.PUBLIC_URL + "/about"}>
+                                {/* <NavLink to={process.env.PUBLIC_URL + "/about"}>
                                     About
-                                </NavLink>
+                                </NavLink> */}
+                                <button
+                                    onClick={() => {
+                                        scrollToSection("about");
+                                        onClose();
+                                    }}
+                                    className="btn"
+                                >
+                                    About
+                                </button>
                             </li>
                             <li>
-                                <NavLink
+                                {/* <NavLink
                                     to={process.env.PUBLIC_URL + "/service"}
                                 >
                                     Service
-                                </NavLink>
-                                <span
+                                </NavLink> */}
+
+                                <button
+                                    onClick={() => {
+                                        scrollToSection("service");
+                                        onClose();
+                                    }}
+                                    className="btn"
+                                >
+                                    Services
+                                </button>
+                                {/* <span
                                     className="menu-expand"
                                     onClick={onClickHandler}
                                     aria-hidden="true"
-                                ></span>
-                                <ul>
+                                ></span> */}
+                                {/* <ul>
                                     <li>
                                         <NavLink
                                             to={
@@ -92,16 +121,26 @@ const MobileMenu = ({ show, onClose }) => {
                                             single service
                                         </NavLink>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
-                            <li>
-                                <NavLink to="/">Pages</NavLink>
+                            {/* <li> */}
+                            {/* <NavLink to="/">Pages</NavLink>
                                 <span
                                     className="menu-expand"
                                     onClick={onClickHandler}
                                     aria-hidden="true"
-                                ></span>
-                                <ul>
+                                ></span> */}
+
+                            {/* <button
+                                    onClick={() => {
+                                        scrollToSection("testimonials");
+                                        onClose();
+                                    }}
+                                    className="btn"
+                                >
+                                    Testimonials
+                                </button> */}
+                            {/* <ul>
                                     <li>
                                         <NavLink
                                             to={process.env.PUBLIC_URL + "/faq"}
@@ -118,18 +157,28 @@ const MobileMenu = ({ show, onClose }) => {
                                             team
                                         </NavLink>
                                     </li>
-                                </ul>
-                            </li>
+                                </ul> */}
+                            {/* </li> */}
                             <li>
-                                <NavLink to={process.env.PUBLIC_URL + "/blog"}>
+                                {/* <NavLink to={process.env.PUBLIC_URL + "/blog"}>
                                     Blog
                                 </NavLink>
                                 <span
                                     className="menu-expand"
                                     onClick={onClickHandler}
                                     aria-hidden="true"
-                                ></span>
-                                <ul>
+                                ></span> */}
+
+                                <button
+                                    onClick={() => {
+                                        scrollToSection("team");
+                                        onClose();
+                                    }}
+                                    className="btn"
+                                >
+                                    Team
+                                </button>
+                                {/* <ul>
                                     <li>
                                         <NavLink
                                             to={
@@ -169,14 +218,24 @@ const MobileMenu = ({ show, onClose }) => {
                                             blog details
                                         </NavLink>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
                             <li>
-                                <NavLink
+                                {/* <NavLink
                                     to={process.env.PUBLIC_URL + "/contact"}
                                 >
                                     Contact
-                                </NavLink>
+                                </NavLink> */}
+
+                                <button
+                                    onClick={() => {
+                                        scrollToSection("contact");
+                                        onClose();
+                                    }}
+                                    className="btn"
+                                >
+                                    Contact
+                                </button>
                             </li>
                         </ul>
                     </nav>

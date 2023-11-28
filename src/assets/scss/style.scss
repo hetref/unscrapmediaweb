@@ -104,5 +104,7 @@
 @import "component";
 
 * {
-    cursor: none !important;
+    @include min-screen(990px) {
+        cursor: none !important;
+    }
 }

@@ -28,7 +28,7 @@ const HomePage = () => {
                     {/* <IconBoxContainer classOption="section-pb" /> */}
                     <HomeAboutContainer />
                     <ServiceListContainer />
-                    <TestimonialContainer />
+                    {/* <TestimonialContainer /> */}
                     {/* <FunFactContainer classOption="mt-10 mt-lg-0" /> */}
                     <TeamContainer classOption="section-pb" />
                     {/* <HomeBlog /> */}

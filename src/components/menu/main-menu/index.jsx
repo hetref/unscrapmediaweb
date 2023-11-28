@@ -63,15 +63,15 @@ const MainMenu = () => {
                         </li>
                     </ul> */}
                 </li>
-                <li>
-                    {/* <NavLink to="/">Testimonials</NavLink> */}
-                    {/* <a href="#testimonials">Testimonials</a> */}
-                    {/* <button onClick={() => scrollToSection("testimonials")}>
+                {/* <li> */}
+                {/* <NavLink to="/">Testimonials</NavLink> */}
+                {/* <a href="#testimonials">Testimonials</a> */}
+                {/* <button onClick={() => scrollToSection("testimonials")}>
                         Testimonials
                     </button> */}
 
-                    <Button path="testimonials" text="Testimonials" />
-                    {/* <ul className="sub-menu">
+                {/* <Button path="testimonials" text="Testimonials" /> */}
+                {/* <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <NavLink
                                 className="sub-menu-link"
@@ -89,7 +89,7 @@ const MainMenu = () => {
                             </NavLink>
                         </li>
                     </ul> */}
-                </li>
+                {/* </li> */}
                 <li>
                     {/* <NavLink to={process.env.PUBLIC_URL + "/blog"}>
                         Team
