@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useCallback, useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { CursorContext } from "../../context/CursorContext";
 
 const ContactForm = () => {
     const { register, errors } = useForm({
