@@ -3,7 +3,7 @@ import ScrollToTop from "../components/scroll-to-top";
 // import SEO from "../components/seo";
 import BrandContainer from "../containers/global/brand/index";
 // import FunFactContainer from "../containers/global/funfact";
-// import IconBoxContainer from "../containers/global/icon-box";
+import IconBoxContainer from "../containers/global/icon-box";
 // import NewsletterArea from "../containers/global/newsletter";
 import TeamContainer from "../containers/global/team";
 import TestimonialContainer from "../containers/global/testimonial";
@@ -25,9 +25,9 @@ const HomePage = () => {
                     <Header />
                     <IntroContainer />
                     <BrandContainer />
-                    {/* <IconBoxContainer classOption="section-pb" /> */}
                     <HomeAboutContainer />
                     <ServiceListContainer />
+                    <IconBoxContainer classOption="section-pb" />
                     {/* <TestimonialContainer /> */}
                     {/* <FunFactContainer classOption="mt-10 mt-lg-0" /> */}
                     <TeamContainer classOption="section-pb" />

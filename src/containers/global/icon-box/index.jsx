@@ -7,42 +7,56 @@ import HomeData from "../../../data/home.json";
 
 const IconBoxContainer = ({ classOption }) => {
     return (
-        <div className={`feature-section position-relative ${classOption}`}>
-            <img
-                className="path-img"
-                src={`${process.env.PUBLIC_URL}/images/feature/shape.png`}
-                alt="images_not_found"
-            />
-            <div className="container custom-container">
-                <div className="row g-0 align-items-center">
-                    <div className="col-xl-6 col-lg-8 mx-auto mb-3 text-center">
-                        <SectionTitle
-                            classOption="title-section"
-                            subTitle="FEATURES"
-                            title="We are <span class='text-primary'>different</span> because..."
-                            excerptClassOption="mb-10"
-                            excerpt="Pleasure rationally encounter consequences that are extremely
+        <>
+            <span
+                style={{
+                    marginTop: "-100px",
+                    paddingBottom: "100px",
+                    display: "block",
+                }}
+                id="works"
+            >
+                &nbsp;
+            </span>
+            <div className={`feature-section position-relative ${classOption}`}>
+                <img
+                    className="path-img"
+                    src={`${process.env.PUBLIC_URL}/images/feature/shape.png`}
+                    alt="images_not_found"
+                />
+                <div className="container custom-container">
+                    <div className="row g-0 align-items-center">
+                        <div className="col-xl-6 col-lg-8 mx-auto mb-3 text-center">
+                            <SectionTitle
+                                classOption="title-section"
+                                subTitle="WORKS"
+                                title="We are <span class='text-primary'>different</span> because..."
+                                excerptClassOption="mb-10"
+                                excerpt="Pleasure rationally encounter consequences that are extremely
                             painful. Nor again is there anyone who loves or pursues or
                             desires to obtain"
-                        />
-                        <Button
-                            classOption="btn btn-lg btn-dark btn-hover-dark"
-                            text="Get Started"
-                            path="/about"
-                        />
-                    </div>
+                            />
+                            <Button
+                                classOption="btn btn-lg btn-dark btn-hover-dark"
+                                text="Get Started"
+                                path="/about"
+                            />
+                        </div>
 
-                    <div className="col-12">
-                        <div id="grid" className="grid row mb-n7">
-                            {HomeData[2].iconBox &&
-                                HomeData[2].iconBox.map((single, key) => {
-                                    return <IconBox key={key} data={single} />;
-                                })}
+                        <div className="col-12">
+                            <div id="grid" className="grid row mb-n7">
+                                {HomeData[2].iconBox &&
+                                    HomeData[2].iconBox.map((single, key) => {
+                                        return (
+                                            <IconBox key={key} data={single} />
+                                        );
+                                    })}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

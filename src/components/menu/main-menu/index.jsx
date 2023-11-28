@@ -91,6 +91,9 @@ const MainMenu = () => {
                     </ul> */}
                 {/* </li> */}
                 <li>
+                    <Button path="works" text="Works" />
+                </li>
+                <li>
                     {/* <NavLink to={process.env.PUBLIC_URL + "/blog"}>
                         Team
                     </NavLink> */}

@@ -160,6 +160,17 @@ const MobileMenu = ({ show, onClose }) => {
                                 </ul> */}
                             {/* </li> */}
                             <li>
+                                <button
+                                    onClick={() => {
+                                        scrollToSection("works");
+                                        onClose();
+                                    }}
+                                    className="btn"
+                                >
+                                    Works
+                                </button>
+                            </li>
+                            <li>
                                 {/* <NavLink to={process.env.PUBLIC_URL + "/blog"}>
                                     Blog
                                 </NavLink>

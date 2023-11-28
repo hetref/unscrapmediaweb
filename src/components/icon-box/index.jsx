@@ -13,9 +13,9 @@ const IconBox = ({ data }) => {
                     alt=" feature logo"
                 />
                 <h4 className="title my-6">
-                    <Link to={process.env.PUBLIC_URL + "/service-details/1"}>
-                        {data.title}
-                    </Link>
+                    {/* <Link to={process.env.PUBLIC_URL + "/service-details/1"}> */}
+                    {data.title}
+                    {/* </Link> */}
                 </h4>
                 <p>{data.excerpt}</p>
             </div>
