@@ -11,6 +11,11 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
+    const [, setCursor] = useContext(CursorContext);
+
+    const toggleCursor = useCallback(() => {
+        setCursor(({ active }) => ({ active: !active }));
+    });
 
     const notify = (message, icon) =>
         toast.success(message, {
@@ -134,6 +139,8 @@ const ContactForm = () => {
                         data-complete-text="Well Done!"
                         onClick={handleSubmit}
                         disabled={loading}
+                        onMouseEnter={toggleCursor}
+                        onMouseLeave={toggleCursor}
                     >
                         Send Message
                     </button>
