@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
     const { register, errors } = useForm({
@@ -10,34 +11,62 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
-    const handleSubmit = () => {
+
+    const notify = (message, icon) =>
+        toast.success(message, {
+            duration: 4000,
+            position: "bottom-right",
+            style: {},
+            className: "",
+            icon,
+        });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setLoading(true);
-        emailjs
-            .send(
-                "service_0zyslu8",
-                "template_cadhcun",
-                {
-                    from_name: name,
-                    to_name: "Aryan Shinde",
-                    from_email: email,
-                    to_email: "aryan.unscrapmedia@gmail.com",
-                    message: message,
-                },
-                "_lFuPk3VscEw-5oGu"
-            )
-            .then(
-                () => {
-                    setLoading(false);
-                    alert(
-                        "Thank you. I will get back to you as soon as possible."
-                    );
-                },
-                (error) => {
-                    setLoading(false);
-                    console.error(error);
-                    alert("Ahh, something went wrong. Please try again.");
-                }
-            );
+        if (
+            name === "" ||
+            name.length === 0 ||
+            email === "" ||
+            email.length === 0
+        ) {
+            notify("Please enter all the required fields", "🙏");
+            setLoading(false);
+        } else {
+            emailjs
+                .send(
+                    "service_0zyslu8",
+                    "template_cadhcun",
+                    {
+                        from_name: name,
+                        to_name: "Aryan Shinde",
+                        from_email: email,
+                        to_email: "aryan.unscrapmedia@gmail.com",
+                        message:
+                            message === "" || message.length === 0
+                                ? "No Message"
+                                : message,
+                    },
+                    "_lFuPk3VscEw-5oGu"
+                )
+                .then(
+                    () => {
+                        setLoading(false);
+                        notify(
+                            "Thank you! We'll get back to you at the earliest",
+                            "😊"
+                        );
+                    },
+                    (error) => {
+                        setLoading(false);
+                        console.error(error);
+                        notify(
+                            "Ahh, something went wrong. Please try again.",
+                            "😅"
+                        );
+                    }
+                );
+        }
     };
 
     return (
@@ -91,9 +120,9 @@ const ContactForm = () => {
                         placeholder="Message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        ref={register({
-                            required: "Message is required",
-                        })}
+                        // ref={register({
+                        //     required: "Message is required",
+                        // })}
                     ></textarea>
                     {errors.message && <p>{errors.message.message}</p>}
                 </div>

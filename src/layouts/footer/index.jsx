@@ -11,7 +11,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className="footer-section">
+        <footer className="footer-section mt-10">
             <div className="footer-top position-relative">
                 <img
                     className="footer-shape"
@@ -20,16 +20,12 @@ const Footer = () => {
                 />
                 <div className="container">
                     <div className="row mb-n7">
-                        <div className="col-lg-4 col-sm-6 mb-7">
+                        <div className="col-lg-6 col-sm-6 mb-7">
                             <div className="footer-widget">
                                 <Logo
                                     classOption="footer-logo mb-9"
                                     image={`${process.env.PUBLIC_URL}/images/logo/logo-black.png`}
                                 />
-                                <p>
-                                    Pleasure rationally encounter consequences
-                                    that extremely painful. Nor again is there
-                                </p>
                                 <ul className="footer-social-links">
                                     <li>
                                         <SocialIcon
@@ -133,7 +129,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div> */}
-                        <div className="col-lg-3 col-sm-6 mb-7">
+                        {/* <div className="col-lg-3 col-sm-6 mb-7">
                             <div className="footer-widget">
                                 <h4 className="title">Services</h4>
                                 <ul className="footer-menu">
@@ -205,8 +201,8 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className="col-lg-5 col-sm-6 mb-7">
+                        </div> */}
+                        <div className="col-lg-6 col-sm-6 mb-7">
                             <div className="footer-widget">
                                 <h4 className="title">Contact info</h4>
                                 <p>

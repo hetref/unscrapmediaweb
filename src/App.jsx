@@ -26,6 +26,7 @@ import "./assets/scss/style.scss";
 import Cursor from "./components/cursor";
 import CursorContextProvider from "./context/CursorContext";
 import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
     const [windowSize, setWindowSize] = useState({
@@ -48,6 +49,7 @@ const App = () => {
     return (
         <CursorContextProvider>
             {windowSize.width > 990 && <Cursor />}
+            <Toaster />
             <Router>
                 <NavScrollTop>
                     <Switch>
